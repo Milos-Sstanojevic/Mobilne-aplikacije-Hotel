@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1034553885226",
+    "project_id": "hotel-5e438",
+    "storage_bucket": "hotel-5e438.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1034553885226:android:7a9782bab5fb55277f7953",
+        "android_client_info": {
+          "package_name": "elfak.mosis.hotel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1034553885226-7qqvm8thl59vmamumfu3ov57jbslvpcg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCk1KwWEubf_Zw53YunT31-L23G_6bsbVc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1034553885226-7qqvm8thl59vmamumfu3ov57jbslvpcg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
