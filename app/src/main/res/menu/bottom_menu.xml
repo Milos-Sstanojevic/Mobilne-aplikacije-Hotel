@@ -6,11 +6,6 @@
         android:icon="@drawable/map"
         />
     <item
-        android:title="Search"
-        android:id="@+id/search"
-        android:icon="@drawable/search"
-        />
-    <item
         android:title="Profile"
         android:id="@+id/profile"
         android:icon="@drawable/profile"

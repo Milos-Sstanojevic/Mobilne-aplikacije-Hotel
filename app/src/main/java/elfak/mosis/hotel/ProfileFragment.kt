@@ -27,18 +27,14 @@ import java.io.File
 
 class ProfileFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = ProfileFragment()
-    }
 
     private lateinit var userNameTextView: TextView
-    private lateinit var numOfObjectsTextView: TextView
+    private lateinit var pointsTextView: TextView
     private lateinit var emailTextView: TextView
     private lateinit var nameLastNameTextView: TextView
     private lateinit var numberTextView: TextView
 
     private lateinit var profileImageView:ImageView
-    private lateinit var viewModel: ProfileViewModel
     private lateinit var auth: FirebaseAuth
     private lateinit var database: FirebaseDatabase
     private lateinit var storage: FirebaseStorage
@@ -46,7 +42,6 @@ class ProfileFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(ProfileViewModel::class.java)
 
 
         auth=FirebaseAuth.getInstance()
@@ -65,9 +60,10 @@ class ProfileFragment : Fragment() {
                     val number = dataSnapshot.child("number").getValue(String::class.java)
                     val name=dataSnapshot.child("name").getValue(String::class.java)
                     val lastName=dataSnapshot.child("lastName").getValue(String::class.java)
+                    val points=dataSnapshot.child("points").getValue(String::class.java)
 
                     userNameTextView.text = userName
-                    //TODO: kad postavlja objekte povecavaj ovaj broj i setuj g, verovatno ces morati u bazi da napravis jos 1 kolonu koja ce to da cuva numOfObjectsTextView.text = "0"
+                    pointsTextView.text=points
                     emailTextView.text = email
                     nameLastNameTextView.text = name + " " + lastName
                     numberTextView.text = number
@@ -97,11 +93,11 @@ class ProfileFragment : Fragment() {
     ): View {
         val view=inflater.inflate(R.layout.fragment_profile,container,false)
         userNameTextView = view.findViewById(R.id.userName)
-        numOfObjectsTextView = view.findViewById(R.id.numOfObjects)
         emailTextView = view.findViewById(R.id.email)
         nameLastNameTextView = view.findViewById(R.id.nameLastName)
         numberTextView = view.findViewById(R.id.number)
         profileImageView=view.findViewById(R.id.profileImage)
+        pointsTextView=view.findViewById(R.id.points)
         return view
     }
 

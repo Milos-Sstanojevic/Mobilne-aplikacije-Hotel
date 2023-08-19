@@ -1,0 +1,70 @@
+<LinearLayout android:padding="16dp"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/soft_aqua"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <androidx.fragment.app.FragmentContainerView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@android:color/white"
+        android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+        android:id="@+id/autocomplete_fragment"
+        android:visibility="invisible"
+        />
+    <EditText
+        android:id="@+id/hotelName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Hotel Name"
+        android:visibility="visible"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/radioRegular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Regular"
+            />
+
+        <RadioButton
+            android:id="@+id/radioName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Name"/>
+
+        <RadioButton
+            android:id="@+id/radioRadius"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Radius"/>
+
+        </RadioGroup>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:text="search"
+        android:visibility="invisible"/>
+</LinearLayout>

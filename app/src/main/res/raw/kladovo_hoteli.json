@@ -1,0 +1,229 @@
+[
+   {
+      "geometry": {
+         "location": {
+            "lat": 44.603897,
+            "lng": 22.6146851
+         },
+         "viewport": {
+            "northeast": {
+               "lat": 44.60526738029149,
+               "lng": 22.61598238029151
+            },
+            "southwest": {
+               "lat": 44.60256941970849,
+               "lng": 22.6132844197085
+            }
+         }
+      },
+      "name": "Martinovic",
+      "rating": 4.5,
+      "vicinity": "Milorada Brujića, Kladovo"
+   },
+   {
+      "geometry": {
+         "location": {
+            "lat": 44.60497489999999,
+            "lng": 22.6147254
+         },
+         "viewport": {
+            "northeast": {
+               "lat": 44.6063664302915,
+               "lng": 22.6159763302915
+            },
+            "southwest": {
+               "lat": 44.6036684697085,
+               "lng": 22.61327836970849
+            }
+         }
+      },
+      "name": "Djerdap Turist",
+      "rating": 1,
+      "vicinity": "50 DUNAVSKA, 19320, Kladovo, Borski county"
+   },
+   {
+      "geometry": {
+         "location": {
+            "lat": 44.60497489999999,
+            "lng": 22.6147254
+         },
+         "viewport": {
+            "northeast": {
+               "lat": 44.6063664302915,
+               "lng": 22.6159763302915
+            },
+            "southwest": {
+               "lat": 44.6036684697085,
+               "lng": 22.61327836970849
+            }
+         }
+      },
+      "name": "Miido",
+      "rating": 5,
+      "vicinity": "3 9. BRIGADE, 19320, Kladovo, Borski okrug"
+   },
+   {
+      "geometry": {
+         "location": {
+            "lat": 44.6020419,
+            "lng": 22.6142986
+         },
+         "viewport": {
+            "northeast": {
+               "lat": 44.6034078302915,
+               "lng": 22.6156641802915
+            },
+            "southwest": {
+               "lat": 44.6007098697085,
+               "lng": 22.61296621970849
+            }
+         }
+      },
+      "name": "Premier Apartments",
+      "rating": 5,
+      "vicinity": "Smederevska, Kladovo"
+   },
+   {
+      "geometry": {
+         "location": {
+            "lat": 44.6046108,
+            "lng": 22.6110976
+         },
+         "viewport": {
+            "northeast": {
+               "lat": 44.6058950302915,
+               "lng": 22.6125924802915
+            },
+            "southwest": {
+               "lat": 44.60319706970851,
+               "lng": 22.6098945197085
+            }
+         }
+      },
+      "name": "KLADOVO",
+      "vicinity": "29 Novembar br.34, Kladovo"
+   },
+   {
+      "geometry": {
+         "location": {
+            "lat": 44.6035552,
+            "lng": 22.6098737
+         },
+         "viewport": {
+            "northeast": {
+               "lat": 44.6050042802915,
+               "lng": 22.6112372802915
+            },
+            "southwest": {
+               "lat": 44.6023063197085,
+               "lng": 22.60853931970849
+            }
+         }
+      },
+      "name": "AMD Rooms and Apartaments",
+      "vicinity": "Ljubomira Tomića 7, Кладово"
+   },
+   {
+      "geometry": {
+         "location": {
+            "lat": 44.6034275,
+            "lng": 22.6199709
+         },
+         "viewport": {
+            "northeast": {
+               "lat": 44.6047613802915,
+               "lng": 22.6213593302915
+            },
+            "southwest": {
+               "lat": 44.6020634197085,
+               "lng": 22.6186613697085
+            }
+         }
+      },
+      "name": "Santos apartman",
+      "vicinity": "7. jula 8, Kladovo"
+   },
+   {
+      "geometry": {
+         "location": {
+            "lat": 44.60736139999999,
+            "lng": 22.617358
+         },
+         "viewport": {
+            "northeast": {
+               "lat": 44.6087309802915,
+               "lng": 22.6186373802915
+            },
+            "southwest": {
+               "lat": 44.6060330197085,
+               "lng": 22.6159394197085
+            }
+         }
+      },
+      "name": "Apartmani TOMIĆ",
+      "rating": 4.9,
+      "vicinity": "1. Maj br. 26, Kladovo"
+   },
+   {
+      "geometry": {
+         "location": {
+            "lat": 44.6074659,
+            "lng": 22.6171089
+         },
+         "viewport": {
+            "northeast": {
+               "lat": 44.6088649302915,
+               "lng": 22.6184857802915
+            },
+            "southwest": {
+               "lat": 44.6061669697085,
+               "lng": 22.6157878197085
+            }
+         }
+      },
+      "name": "Apartman Barba",
+      "rating": 4.9,
+      "vicinity": "1. maja 24, Kladovo"
+   },
+   {
+      "geometry": {
+         "location": {
+            "lat": 44.6078874,
+            "lng": 22.6129919
+         },
+         "viewport": {
+            "northeast": {
+               "lat": 44.6092604802915,
+               "lng": 22.6142679302915
+            },
+            "southwest": {
+               "lat": 44.6065625197085,
+               "lng": 22.6115699697085
+            }
+         }
+      },
+      "name": "Kuća za odmor",
+      "rating": 4.4,
+      "vicinity": "Timočka 5, Kladovo"
+   },
+   {
+      "geometry": {
+         "location": {
+            "lat": 44.5997887,
+            "lng": 22.6173125
+         },
+         "viewport": {
+            "northeast": {
+               "lat": 44.6011308802915,
+               "lng": 22.6186918302915
+            },
+            "southwest": {
+               "lat": 44.5984329197085,
+               "lng": 22.6159938697085
+            }
+         }
+      },
+      "name": "Vila Keops",
+      "vicinity": "Karađorđeva 36, Kladovo"
+   }
+]

@@ -86,7 +86,7 @@ class SignUpActivity : AppCompatActivity() {
             val confirmPass = binding.confirmPassEt.text.toString()
             val number = binding.numberEt.text.toString()
             val userName = binding.userNameEt.text.toString()
-
+            val points=0
 
             if (number.isNotBlank() && number.isNotEmpty() && userName.isNotBlank() && name.isNotEmpty() && lastName.isNotBlank() && lastName.isNotEmpty() && email.isNotBlank() && pass.isNotEmpty() && pass.isNotBlank() && confirmPass.isNotBlank() && confirmPass.isNotEmpty()) {
                 if (number.length != 10) {
@@ -135,7 +135,8 @@ class SignUpActivity : AppCompatActivity() {
                                                         name,
                                                         lastName,
                                                         userName,
-                                                        number
+                                                        number,
+                                                        points
                                                     )
                                                     Toast.makeText(
                                                         this@SignUpActivity,
@@ -191,7 +192,8 @@ class SignUpActivity : AppCompatActivity() {
         name: String,
         lastName: String,
         userName: String,
-        number: String
+        number: String,
+        points: Int
     ) {
         val currentUser = firebaseAuth.currentUser
         currentUser?.let { user ->
@@ -199,11 +201,11 @@ class SignUpActivity : AppCompatActivity() {
             val databaseReference = firebaseDatabase.reference.child("users").child(uid)
             val usernameReference = firebaseDatabase.reference.child("userNames")
             val numberRef = firebaseDatabase.reference.child("numbers")
+            val pointsRef= firebaseDatabase.reference.child("points")
 
             val userData =
-                elfak.mosis.hotel.model.UserData(name, lastName, userName, number)
+                elfak.mosis.hotel.model.UserData(name, lastName, userName, number,points)
 
-            // Save user data to the database
             databaseReference.setValue(userData)
                 .addOnSuccessListener {
                     usernameReference.child(userName).setValue(true).addOnSuccessListener {
