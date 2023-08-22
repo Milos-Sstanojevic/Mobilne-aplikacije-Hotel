@@ -27,7 +27,6 @@ class CommentPlaceActivity : AppCompatActivity() {
 
         auth=FirebaseAuth.getInstance()
 
-
         var currentUser=auth.currentUser
 
         var databaseRef=database.reference.child("users").child(currentUser!!.uid)
@@ -38,8 +37,6 @@ class CommentPlaceActivity : AppCompatActivity() {
 
 
         val currentPlaceName=intent.getSerializableExtra("selectedPlace")
-
-
 
 
         databaseRef.addListenerForSingleValueEvent(object: ValueEventListener {
@@ -63,10 +60,9 @@ class CommentPlaceActivity : AppCompatActivity() {
 
                                         val commentData=mapOf("userName" to userName, "comment" to commentText)
 
-                                        commentsRef.push().setValue(commentData)
+                                        commentsRef.setValue(commentData)
                                         commentEditText.setText("")
 
-                                        TODO("PREUZMI KORISNIKOVE PODATKE TAKO DA MOZES DA KADA KOMENTARISE POVECAS POENE JER JE KOMENTARISAO A KASNIJE NAPRAVI DA DOBIJA POENE I ZA DODATE OBJEKTE")
                                     }else{
                                         Toast.makeText(this@CommentPlaceActivity,"You can't comment same place twice!",Toast.LENGTH_LONG).show()                                    }
                                 }
@@ -75,6 +71,20 @@ class CommentPlaceActivity : AppCompatActivity() {
                                     error.toException().printStackTrace()
                                 }
                             })
+
+                            val userRef=database.reference.child("users").child(currentUser.uid)
+
+                            userRef.child("points").get().addOnSuccessListener { dataSnapshot ->
+                                val currScore=dataSnapshot.value
+
+                                userRef.child("points").setValue(currScore.toString().toInt()+10).addOnSuccessListener {
+                                    Toast.makeText(this@CommentPlaceActivity,"Successfully commented place",Toast.LENGTH_SHORT).show()
+                                    finish()
+                                }
+                            }
+                                .addOnFailureListener{
+                                    Toast.makeText(this@CommentPlaceActivity,"Failed to add comment",Toast.LENGTH_SHORT).show()
+                                }
                         }
                     }
                 }

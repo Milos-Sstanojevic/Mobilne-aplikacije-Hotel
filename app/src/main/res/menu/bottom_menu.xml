@@ -6,6 +6,11 @@
         android:icon="@drawable/map"
         />
     <item
+        android:title="Scoreboard"
+        android:id="@+id/scoreboard"
+        android:icon="@drawable/scoreboard"
+        />
+    <item
         android:title="Profile"
         android:id="@+id/profile"
         android:icon="@drawable/profile"

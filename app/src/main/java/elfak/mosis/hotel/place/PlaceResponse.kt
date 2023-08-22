@@ -8,7 +8,7 @@ data class PlaceResponse(
     val name: String,
     val vicinity: String,
     val rating: Double,
-    val comment:List<String>
+    val comment:String
 ) {
 
     data class Geometry(

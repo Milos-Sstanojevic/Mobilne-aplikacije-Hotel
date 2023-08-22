@@ -95,10 +95,10 @@ class AddHotelActivity : ComponentActivity() {
                     }else{
                         val address=addresses[0].getAddressLine(0)
 
-                        val hotel=Hotel(userId,name,address,location.latitude,location.longitude, rating, emptyList(),capacity,currentGuests)
+                        val hotel=Hotel(userId,name,address,location.latitude,location.longitude, rating, "",capacity,currentGuests)
 
 
-                        val hotelRef=databaseRef.child("hotels").child(userId)
+                        val hotelRef=databaseRef.child("hotels").child(hotel.name)
 
                         hotelRef.get().addOnSuccessListener { snapshot ->
                             var hotelExist=false
@@ -121,7 +121,7 @@ class AddHotelActivity : ComponentActivity() {
                                 Toast.makeText(this, "A hotel already exists at this location", Toast.LENGTH_SHORT).show()
                             }
                             else{
-                                hotelRef.push().setValue(hotel).addOnSuccessListener {
+                                hotelRef.setValue(hotel).addOnSuccessListener {
                                     val userRef=databaseRef.child("users").child(userId)
                                     userRef.child("points").get().addOnSuccessListener { dataSnapshot ->
                                         val currScore=dataSnapshot.value

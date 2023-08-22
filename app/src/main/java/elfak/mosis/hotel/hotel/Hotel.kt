@@ -10,7 +10,7 @@ data class Hotel (
     val latitude: Double = 0.0,
     val longitude: Double = 0.0,
     val rating: Int = 0,
-    val comments: List<String> = emptyList(),
+    var comments: String="",
     val capacity: Int = 0,
     val currentGuests: Int = 0
 ):Serializable

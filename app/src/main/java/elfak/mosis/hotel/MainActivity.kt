@@ -2,7 +2,6 @@ package elfak.mosis.hotel
 
 import android.content.Intent
 import android.os.Bundle
-import android.provider.ContactsContract.Profile
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 
@@ -29,6 +28,10 @@ class MainActivity : AppCompatActivity() {
             when (item.itemId) {
                 R.id.map -> {
                     loadFragment(MapFragment())
+                    true
+                }
+                R.id.scoreboard->{
+                    loadFragment(ScoreboardFragment())
                     true
                 }
                 R.id.profile -> {

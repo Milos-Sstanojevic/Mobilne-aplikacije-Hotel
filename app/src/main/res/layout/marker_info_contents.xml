@@ -15,7 +15,7 @@
         android:textColor="@android:color/black"
         android:textSize="18sp"
         android:textStyle="bold"
-        tools:text="Title"/>
+        tools:text=""/>
 
     <TextView
         android:id="@+id/text_view_address"
@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:textColor="@android:color/black"
         android:textSize="16sp"
-        tools:text="123 Main Street"/>
+        tools:text=""/>
 
     <TextView
         android:id="@+id/text_view_rating"
@@ -31,7 +31,34 @@
         android:layout_height="wrap_content"
         android:textColor="@android:color/black"
         android:textSize="16sp"
-        tools:text="Rating: 3"/>
+        tools:text="Rating: "/>
+
+    <TextView
+        android:id="@+id/current_guests"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        tools:text="Current guests"/>
+
+    <TextView
+        android:id="@+id/guest_limit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        tools:text="Guest capacity"/>
+
+    <TextView
+        android:id="@+id/comments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:visibility="visible"
+        tools:text=""
+        tools:visibility="visible" />
 
 
 

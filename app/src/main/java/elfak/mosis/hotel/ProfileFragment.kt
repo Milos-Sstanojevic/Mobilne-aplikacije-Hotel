@@ -60,10 +60,10 @@ class ProfileFragment : Fragment() {
                     val number = dataSnapshot.child("number").getValue(String::class.java)
                     val name=dataSnapshot.child("name").getValue(String::class.java)
                     val lastName=dataSnapshot.child("lastName").getValue(String::class.java)
-                    val points=dataSnapshot.child("points").getValue(String::class.java)
+                    val points=dataSnapshot.child("points").getValue(Long::class.java)
 
                     userNameTextView.text = userName
-                    pointsTextView.text=points
+                    pointsTextView.text=points.toString()
                     emailTextView.text = email
                     nameLastNameTextView.text = name + " " + lastName
                     numberTextView.text = number

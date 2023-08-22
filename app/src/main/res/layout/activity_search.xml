@@ -13,14 +13,15 @@
         android:background="@android:color/white"
         android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
         android:id="@+id/autocomplete_fragment"
-        android:visibility="invisible"
+        android:visibility="visible"
+        android:clickable="true"
         />
     <EditText
         android:id="@+id/hotelName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Hotel Name"
-        android:visibility="visible"/>
+        android:visibility="invisible"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -40,6 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Regular"
+            android:checked="true"
             />
 
         <RadioButton
@@ -47,7 +49,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Name"/>
+            android:text="Name"
+            />
 
         <RadioButton
             android:id="@+id/radioRadius"
@@ -66,5 +69,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="16dp"
         android:text="search"
-        android:visibility="invisible"/>
+        android:visibility="visible"
+        android:clickable="true"
+        />
 </LinearLayout>

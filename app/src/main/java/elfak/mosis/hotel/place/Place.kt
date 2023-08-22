@@ -10,5 +10,5 @@ data class Place(
     val latLng: LatLng,
     val address: String,
     val rating: Double,
-    val comment: List<String>
+    val comment: String
 ):Serializable
