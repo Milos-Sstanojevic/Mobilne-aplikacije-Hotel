@@ -168,6 +168,7 @@ class SearchActivity : AppCompatActivity() {
                                 resultIntent.putExtra("matchingHotels", matchingHotels)
                                 setResult(Activity.RESULT_OK, resultIntent)
                             } else {
+                                Toast.makeText(this@SearchActivity,"There is no hotels with inserted name",Toast.LENGTH_LONG).show()
                                 setResult(Activity.RESULT_CANCELED)
                             }
                             finish()

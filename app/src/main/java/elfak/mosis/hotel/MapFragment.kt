@@ -269,6 +269,8 @@ class MapFragment : Fragment() {
 
                         marker!!.tag = place
                         marker!!.showInfoWindow()
+                        val cameraUpdate = CameraUpdateFactory.newLatLngZoom(place!!.latLng, 18f)
+                        googleMap.animateCamera(cameraUpdate)
 
                     }
 
@@ -316,6 +318,8 @@ class MapFragment : Fragment() {
                         marker?.tag = matchingHotels
                         marker?.showInfoWindow()
 
+                        val cameraUpdate = CameraUpdateFactory.newLatLngZoom(LatLng(matchingHotels!!.latitude,matchingHotels!!.longitude), 18f)
+                        googleMap.animateCamera(cameraUpdate)
                     }
 
                     override fun onCancelled(error: DatabaseError) {

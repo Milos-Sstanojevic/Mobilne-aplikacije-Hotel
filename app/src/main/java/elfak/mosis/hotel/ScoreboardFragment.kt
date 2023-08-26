@@ -50,34 +50,48 @@ class ScoreboardFragment : Fragment() {
         usersRef.addValueEventListener(object: ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
 
+                val userList = mutableListOf<Pair<String, Int>>()
+
+                for (userSnapshot in snapshot.children) {
+                    val userId = userSnapshot.key
+                    val userName = userSnapshot.child("userName").getValue(String::class.java)
+                    val userScore = userSnapshot.child("points").getValue(Int::class.java)
+
+                    if (userId != null && userName != null && userScore != null) {
+                        userList.add(Pair(userName, userScore))
+                    }
+                }
+
+
+                userList.sortByDescending { it.second }
+
+
                 tableLayout.removeViews(1, tableLayout.childCount - 1)
 
-                for(userSnapshot in snapshot.children){
-                    val userId=userSnapshot.key
-                    val userName=userSnapshot.child("userName").getValue(String::class.java)
-                    val userScore=userSnapshot.child("points").getValue(Int::class.java)
 
-                    if(userId!=null && userName!=null && userScore!=null){
-                        val userRow= TableRow(requireContext())
-                        userRow.gravity=Gravity.CENTER
-                        userRow.setBackgroundResource(R.drawable.table_border)
+                for (userData in userList) {
+                    val userName = userData.first
+                    val userScore = userData.second
 
-                        val userNameTextView= TextView(requireContext())
-                        userNameTextView.text=userName
-                        userNameTextView.gravity= Gravity.CENTER
-                        userNameTextView.layoutParams = TableRow.LayoutParams(
-                            0, TableRow.LayoutParams.WRAP_CONTENT, 1f
-                        )
-                        val userScoreTextView= TextView(requireContext())
-                        userScoreTextView.text=userScore.toString()
-                        userScoreTextView.gravity= Gravity.CENTER
-                        userScoreTextView.layoutParams = TableRow.LayoutParams(
-                            0, TableRow.LayoutParams.WRAP_CONTENT, 1f
-                        )
-                        userRow.addView(userNameTextView)
-                        userRow.addView(userScoreTextView)
-                        tableLayout.addView(userRow)
-                    }
+                    val userRow = TableRow(requireContext())
+                    userRow.gravity = Gravity.CENTER
+                    userRow.setBackgroundResource(R.drawable.table_border)
+
+                    val userNameTextView = TextView(requireContext())
+                    userNameTextView.text = userName
+                    userNameTextView.gravity = Gravity.CENTER
+                    userNameTextView.layoutParams = TableRow.LayoutParams(
+                        0, TableRow.LayoutParams.WRAP_CONTENT, 1f
+                    )
+                    val userScoreTextView = TextView(requireContext())
+                    userScoreTextView.text = userScore.toString()
+                    userScoreTextView.gravity = Gravity.CENTER
+                    userScoreTextView.layoutParams = TableRow.LayoutParams(
+                        0, TableRow.LayoutParams.WRAP_CONTENT, 1f
+                    )
+                    userRow.addView(userNameTextView)
+                    userRow.addView(userScoreTextView)
+                    tableLayout.addView(userRow)
                 }
             }
 
