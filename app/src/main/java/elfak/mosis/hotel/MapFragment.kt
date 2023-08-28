@@ -61,8 +61,7 @@ class MapFragment : Fragment() {
     private lateinit var addComent: Button
     private lateinit var addHotel: Button
     private lateinit var reserveButton: Button
-
-    private lateinit var auth: FirebaseAuth
+    
     private lateinit var database: FirebaseDatabase
     private var savedCameraPosition: CameraPosition? = null
 

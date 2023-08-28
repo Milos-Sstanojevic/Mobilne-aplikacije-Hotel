@@ -63,6 +63,20 @@ class CommentPlaceActivity : AppCompatActivity() {
                                         commentsRef.setValue(commentData)
                                         commentEditText.setText("")
 
+                                        val userRef=database.reference.child("users").child(currentUser.uid)
+
+                                        userRef.child("points").get().addOnSuccessListener { dataSnapshot ->
+                                            val currScore=dataSnapshot.value
+
+                                            userRef.child("points").setValue(currScore.toString().toInt()+10).addOnSuccessListener {
+                                                Toast.makeText(this@CommentPlaceActivity,"Successfully commented place",Toast.LENGTH_SHORT).show()
+                                                finish()
+                                            }
+                                        }
+                                            .addOnFailureListener{
+                                                Toast.makeText(this@CommentPlaceActivity,"Failed to add comment",Toast.LENGTH_SHORT).show()
+                                            }
+
                                     }else{
                                         Toast.makeText(this@CommentPlaceActivity,"You can't comment same place twice!",Toast.LENGTH_LONG).show()                                    }
                                 }
@@ -71,20 +85,6 @@ class CommentPlaceActivity : AppCompatActivity() {
                                     error.toException().printStackTrace()
                                 }
                             })
-
-                            val userRef=database.reference.child("users").child(currentUser.uid)
-
-                            userRef.child("points").get().addOnSuccessListener { dataSnapshot ->
-                                val currScore=dataSnapshot.value
-
-                                userRef.child("points").setValue(currScore.toString().toInt()+10).addOnSuccessListener {
-                                    Toast.makeText(this@CommentPlaceActivity,"Successfully commented place",Toast.LENGTH_SHORT).show()
-                                    finish()
-                                }
-                            }
-                                .addOnFailureListener{
-                                    Toast.makeText(this@CommentPlaceActivity,"Failed to add comment",Toast.LENGTH_SHORT).show()
-                                }
                         }
                     }
                 }

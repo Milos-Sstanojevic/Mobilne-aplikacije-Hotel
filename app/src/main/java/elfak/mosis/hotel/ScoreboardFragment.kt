@@ -28,6 +28,8 @@ class ScoreboardFragment : Fragment() {
 
         val view= inflater.inflate(R.layout.fragment_scoreboard, container, false)
 
+        val context=requireContext()
+
         database= FirebaseDatabase.getInstance()
         auth= FirebaseAuth.getInstance()
 
@@ -73,17 +75,17 @@ class ScoreboardFragment : Fragment() {
                     val userName = userData.first
                     val userScore = userData.second
 
-                    val userRow = TableRow(requireContext())
+                    val userRow = TableRow(context)
                     userRow.gravity = Gravity.CENTER
                     userRow.setBackgroundResource(R.drawable.table_border)
 
-                    val userNameTextView = TextView(requireContext())
+                    val userNameTextView = TextView(context)
                     userNameTextView.text = userName
                     userNameTextView.gravity = Gravity.CENTER
                     userNameTextView.layoutParams = TableRow.LayoutParams(
                         0, TableRow.LayoutParams.WRAP_CONTENT, 1f
                     )
-                    val userScoreTextView = TextView(requireContext())
+                    val userScoreTextView = TextView(context)
                     userScoreTextView.text = userScore.toString()
                     userScoreTextView.gravity = Gravity.CENTER
                     userScoreTextView.layoutParams = TableRow.LayoutParams(
