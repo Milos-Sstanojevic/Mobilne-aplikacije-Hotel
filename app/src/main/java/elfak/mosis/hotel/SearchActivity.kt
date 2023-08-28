@@ -35,7 +35,6 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import elfak.mosis.hotel.hotel.Hotel
-import elfak.mosis.hotel.place.StringUtil
 import java.io.Serializable
 
 class SearchActivity : AppCompatActivity() {
@@ -100,11 +99,6 @@ class SearchActivity : AppCompatActivity() {
                         val resultIntent = Intent()
                         resultIntent.putExtra("selectedPlace", place)
                         setResult(Activity.RESULT_OK, resultIntent)
-                        Toast.makeText(
-                            this@SearchActivity,
-                            "${StringUtil.stringifyAutocompleteWidget(place, false)}",
-                            Toast.LENGTH_SHORT
-                        ).show()
                         finish()
                     }
 

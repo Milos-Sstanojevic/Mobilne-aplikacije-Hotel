@@ -37,7 +37,6 @@ class SignUpActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySignUpBinding
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var firebaseDatabase: FirebaseDatabase
-    private lateinit var mAuthStateListener: FirebaseAuth.AuthStateListener
     private lateinit var firebaseStorage: FirebaseStorage
 
     private val pickImageLauncher =
@@ -48,7 +47,6 @@ class SignUpActivity : AppCompatActivity() {
                     val selectedImageUri: Uri? = intent.data
 
                     pickedImageUri = selectedImageUri
-                    // Do something with the selectedImageUri, like display it in the ImageView
                     selectedImageUri?.let {
                         imageView.setImageURI(selectedImageUri)
                     }
