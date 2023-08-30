@@ -25,7 +25,6 @@ import com.google.firebase.auth.UserProfileChangeRequest
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
 import elfak.mosis.hotel.databinding.ActivitySignUpBinding
-import elfak.mosis.hotel.ui.theme.HotelTheme
 
 class SignUpActivity : AppCompatActivity() {
 

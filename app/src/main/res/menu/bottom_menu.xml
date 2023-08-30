@@ -4,20 +4,24 @@
         android:title="Map"
         android:id="@+id/map"
         android:icon="@drawable/map"
+        style="@style/BlueBottomNavigationStyle"
         />
     <item
         android:title="Scoreboard"
         android:id="@+id/scoreboard"
         android:icon="@drawable/scoreboard"
+        style="@style/BlueBottomNavigationStyle"
         />
     <item
         android:title="Profile"
         android:id="@+id/profile"
         android:icon="@drawable/profile"
+        style="@style/BlueBottomNavigationStyle"
         />
     <item
         android:title="Logout"
         android:id="@+id/logout"
         android:icon="@drawable/logout"
+        style="@style/BlueBottomNavigationStyle"
         />
 </menu>

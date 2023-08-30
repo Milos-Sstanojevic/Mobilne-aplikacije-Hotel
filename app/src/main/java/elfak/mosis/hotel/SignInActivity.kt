@@ -15,7 +15,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.google.firebase.auth.FirebaseAuth
-import elfak.mosis.hotel.ui.theme.HotelTheme
 
 class SignInActivity : AppCompatActivity() {
 

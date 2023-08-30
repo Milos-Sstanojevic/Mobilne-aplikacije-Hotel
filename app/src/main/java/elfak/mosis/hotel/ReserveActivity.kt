@@ -17,7 +17,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
-import elfak.mosis.hotel.ui.theme.HotelTheme
 
 class ReserveActivity : ComponentActivity() {
 

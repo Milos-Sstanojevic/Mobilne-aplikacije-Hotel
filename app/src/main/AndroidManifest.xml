@@ -15,33 +15,28 @@
         android:label="HotelReservation"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Hotel"
+        android:theme="@style/Base.Theme.Hotel"
         tools:targetApi="31">
         <activity
             android:name=".ScoreboardFragment"
             android:exported="false"
-            android:label="@string/title_activity_scoreboard"
-            android:theme="@style/Theme.Hotel" />
+            android:theme="@style/Base.Theme.Hotel" />
         <activity
             android:name=".ReserveActivity"
             android:exported="false"
-            android:label="@string/title_activity_reserve"
-            android:theme="@style/Theme.Hotel" />
+            android:theme="@style/Base.Theme.Hotel" />
         <activity
             android:name=".AddHotelActivity"
             android:exported="false"
-            android:label="@string/title_activity_add_hotel"
-            android:theme="@style/Theme.Hotel" />
+            android:theme="@style/Base.Theme.Hotel" />
         <activity
             android:name=".CommentPlaceActivity"
             android:exported="false"
-            android:label="@string/title_activity_add_hotel"
-            android:theme="@style/Theme.Hotel" />
+            android:theme="@style/Base.Theme.Hotel" />
         <activity
             android:name=".SearchActivity"
             android:exported="false"
-            android:label="@string/title_activity_details"
-            android:theme="@style/Theme.Hotel" />
+            android:theme="@style/Base.Theme.Hotel" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -50,13 +45,12 @@
         <activity
             android:name=".SignUpActivity"
             android:exported="false"
-            android:label="@string/title_activity_sign_up"
-            android:theme="@style/Theme.Hotel" />
+            android:theme="@style/Base.Theme.Hotel" />
         <activity
             android:name=".SignInActivity"
             android:exported="true"
             android:label="Hotel Reservation"
-            android:theme="@style/Theme.Hotel">
+            android:theme="@style/Base.Theme.Hotel">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -66,8 +60,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="false"
-            android:label="@string/title_activity_main"
-            android:theme="@style/Theme.Hotel" />
+            android:theme="@style/Base.Theme.Hotel" />
     </application>
 
 </manifest>
